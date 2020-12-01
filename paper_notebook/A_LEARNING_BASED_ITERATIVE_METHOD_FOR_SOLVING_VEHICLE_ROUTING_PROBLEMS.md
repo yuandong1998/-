@@ -22,7 +22,9 @@
 
 ## 3. Method(s)
 
-<img src="https://cdn.mathpix.com/snip/images/BrpQeGoDCws4kkFDCV99I2NuyIIMktdZ0-jkQqYETi4.original.fullsize.png" style="zoom:50%;" />
+<img src="https://s3.ax1x.com/2020/11/20/DQF89P.png" style="zoom:50%;" />
+
+
 
 ​		上图是问题的整体框架，下面介绍一些详细内容。
 
@@ -65,8 +67,6 @@ $L=6,T=4000,N=20,50,100$，经过L次的更新没有提升则perturb，一共进
 
 
 **算子的使用情况**：在采用reward的两种不同方案下，operate使用情况并不相同。
-
-
 
 **扰动分析：** 随机排列两个和随机排列所有的扰动方式前者效果更好。
 

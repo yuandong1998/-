@@ -2,11 +2,9 @@
 
  [TOC]
 
-
-
 ## 0. Summary
 
-对于类似TSP的组合优化问题，通过Encoder生成节点嵌入，然后输入decoder生成策略$pi$，训练方法是 REINFORCE with a simple baseline based on a deterministic greedy rollout。可以解决TSP、VRP、OP、PCTSP等问题，在多个问题上使用很灵活。 
+对于类似TSP的组合优化问题，通过Encoder生成节点嵌入，然后输入decoder生成策略$\pi$，训练方法是 **REINFORCE with a simple baseline based on a deterministic greedy rollout**。可以解决TSP、VRP、OP、PCTSP等问题，在多个问题上使用很灵活。 
 
 
 
@@ -20,7 +18,7 @@ TSP、VRP、OP、PCTSP。
 
 ## 2. Method(s)
 
-本文提出了 Attention Model。模型整体为encoder-decoder框架，其中encoder生成所有节点的嵌入，decoder生成序列$\pi$，一次一个节点，输入为the encoder embeddings 、a problem specific mask  、context  。文中认为已经访问过的其他节点的顺序和坐标无关。解码器的上下文由第一个和最后一个的嵌入组成，用掩码来确定已经访问的节点。
+本文提出了 Attention Model。模型整体为encoder-decoder框架，其中encoder生成所有节点的嵌入，decoder生成序列$\pi$，一次一个节点，输入为**the encoder embeddings** 、**a problem specific mask**  、**context**  。文中认为已经访问过的其他节点的顺序和坐标无关。解码器的上下文由第一个和最后一个的嵌入组成，用掩码来确定已经访问的节点。
 
 
 
@@ -185,6 +183,6 @@ $$
 
 ## Reference
 
-
+[1] Michel Deudon, Pierre Cournut, Alexandre Lacoste, Yossiri Adulyasak, and Louis-Martin Rousseau. Learning heuristics for the TSP by policy gradient. In International Conference on the Integration of Constraint Programming, Artiﬁcial Intelligence, and Operations Research, pp. 170–181. Springer, 2018. 
 
 
